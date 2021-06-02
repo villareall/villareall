@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>BLOOD IS BLOOD</title>
+</head>
+<body bgcolor="lightyellow">
+<center>
+<h1 style="color:dodgerblue;">BLOOD BANK</h1>
+<p><i>"Donate your blood and make a difference."</p></i>
+<h2 style="color:dodgerblue;"> Request Organizer </h2>
+
+<label id="names">Organizer ID:</label><br>
+    <input type="text" name="Organizer" id="Organizer" placeholder="Enter Organizer ID">
+    <br>
+    <br>
+<label for="Hospital">Hospital Name:</label>
+  <select name="HP" id="HP">
+    <option value=""></option>
+    <option value="Dasmariñas City Medical Center">Dasmariñas City Medical Center</option>
+    <option value="Asia Medic Family Hospital & Medical Center">Asia Medic Family Hospital & Medical Center</option>
+    <option value="De La Salle University Medical Center">De La Salle University Medical Center</option>
+    <option value="Emilio Aguinaldo College Medical Center - Cavite">Emilio Aguinaldo College Medical Center - Cavite</option>
+    <option value="Fabella-Narciso Pharmacy & Medical Clinic">Fabella-Narciso Pharmacy & Medical Clinic</option>
+    <option value="Pagamutan ng Dasmariñas">Pagamutan ng Dasmariñas</option>
+    <option value="St. Paul Hospital Cavite">St. Paul Hospital Cavite</option>
+    <option value="Medcor Dasmariñas Hospital and Medical Center">Medcor Dasmariñas Hospital and Medical Center</option>
+    <option value="GMF Hospital">GMF Hospital</option>
+    <option value="Asia Pacific Medical and Diagnostics">Asia Pacific Medical and Diagnostics</option>
+  </select>
+    <br>
+    <br>
+<form class ="form" action="" method="post">
+    {% csrf_token %}
+    
+    <label id="names">Hospital Address:</label><br>
+    <input type="text" name="hospital" id="hospital" placeholder="Enter Hospital Address">
+    <br>
+    <br>
+    <label id="subjects">Business Email:</label> <br>
+    <input type="text" name="business" id="business" placeholder="Enter Business Email">
+    <br>
+    <br>
+    <label id="subjects">Username:</label> <br>
+    <input type="text" name="rrrr" id="rrrr" placeholder="Enter Username">
+    <br>
+    <br>
+    <!-- <label id=bodies>Patient Blood Group:</label><br>
+    <input type="text" name="body" id="body" placeholder="Enter Blood Group">
+    <br>
+    <br>
+    <label id="names">Patient Disease:</label><br>
+    <input type="text" name="name" id="name" placeholder="Enter Disease">
+    <br>
+    <br>
+    <div id="gender">
+   <p>GENDER:</p>
+   <h3 style="color:blue;">
+    <input type ="radio" id="male" name="gender" value="MALE" required>MALE</h3>
+   <h3 style="color:red;">
+    <input type ="radio" id="female" name="gender" value="FEMALE" required>FEMALE<br><br></h3>
+    <label id=dates>Date</label><br>
+	</div>
+
+    <input type="date" name="date" id="date">
+    <br>
+    <br>
+    <input type="submit" id="ggg"> -->
+<input 
+        type="submit" 
+        id="inConfirm" 
+        name="inConfirm" 
+        style="color: red; background-color: lightgrey" 
+        value="Confirm"
+    >
+</form>
+</center>
+
+</body>
+</html>
+</html>

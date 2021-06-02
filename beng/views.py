@@ -1,30 +1,35 @@
-from django.shortcuts import render, HttpResponse
-from .models import Item
+from django.shortcuts import redirect,render
+from .models import Login, Patient, Donor, RequestDonor, RequestOrganizer
 
-# Create your views here.
-def Russex(request):
+def mainpage(request):
+
+	return render(request,'mainpage.html')
+
+def Patient(request):
+
+	usser=Login.objects.create(
+		username = request.POST['aaaa'],
+		password = request.POST['password'],
+		)
+	return render(request,'2nd.html')
+	return redirect('goods') 
+
+def Donor(request):
+
+	usser=Login.objects.create(
+		firstName = request.POST['First'],
+		lastName = request.POST['Last'],
+		email = request.POST['Email'],
+		contactNumber = request.POST['Contact'],
+		age = request.POST['Age'],
+		gendr = request.POST[('gender','MALE'),('gender','FEMALE')]
+		)
+	return render(request,'3rd.html')
+	return redirect('goods')
+
+
+# def Item(request):
+
+
 	
-	if request.method == 'POST':
-		
-		name = request.POST['name']
-		subject = request.POST['subject']
-		body = request.POST['body']
-		gender = request.POST['gender']
-		date = request.POST['date']
-
-		
-		rus = Item()
-		rus.name = name
-		rus.subject = subject
-		rus.body = body
-		rus.gender = gender
-		rus.date = date
-		rus.save()
-
-
-	return render(request,'weh.html')
-
-
-def Page(request):
-	rus = Item.objects.all().order_by('date')
-	return render(request,'dada.html', {'rus': rus})
+# 	return render(request,'second.html')
