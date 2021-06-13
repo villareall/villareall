@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Login, Patient, Donor, RequestDonor, RequestOrganizer
+from .models import donor, blooddetails, bloodbank, hospital, employee, bloodrequest
 # Register your models here.
-admin.site.register(Login)
-admin.site.register(Patient)
-admin.site.register(Donor)
-admin.site.register(RequestDonor)
-admin.site.register(RequestOrganizer)
+admin.site.register(donor)
+admin.site.register(blooddetails)
+admin.site.register(bloodbank)
+admin.site.register(hospital)
+admin.site.register(employee)
+admin.site.register(bloodrequest)

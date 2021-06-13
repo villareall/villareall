@@ -1,35 +1,27 @@
 from django.shortcuts import redirect,render
-from .models import Login, Patient, Donor, RequestDonor, RequestOrganizer
+from .models import donor, blooddetails, bloodbank, hospital, employee, bloodrequest
 
 def mainpage(request):
 
-	return render(request,'mainpage.html')
+	return render(request,'home.html')
+	return redirect('goods') 
 
 def Patient(request):
 
-	usser=Login.objects.create(
-		username = request.POST['aaaa'],
-		password = request.POST['password'],
-		)
-	return render(request,'2nd.html')
-	return redirect('goods') 
+
+	return render(request,'donor.html')
+# 	return redirect('goods') 
 
 def Donor(request):
 
-	usser=Login.objects.create(
-		firstName = request.POST['First'],
-		lastName = request.POST['Last'],
-		email = request.POST['Email'],
-		contactNumber = request.POST['Contact'],
-		age = request.POST['Age'],
-		gendr = request.POST[('gender','MALE'),('gender','FEMALE')]
-		)
-	return render(request,'3rd.html')
-	return redirect('goods')
+	return render(request,'bank.html')
+# 	return redirect('goods')
 
 
-# def Item(request):
+def request(request):
 
+	return render(request,'request.html')
 
-	
-# 	return render(request,'second.html')
+def about(request):
+
+	return render(request,'about.html')
